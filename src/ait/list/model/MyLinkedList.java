@@ -152,14 +152,18 @@ public class MyLinkedList<E> implements IList<E> {
     public Iterator<E> iterator() {
         // TODO
         return new Iterator<E>() {
+            Node<E> node = first;
+
             @Override
             public boolean hasNext() {
-                return false;
+                return node != null;
             }
 
             @Override
             public E next() {
-                return null;
+                E data = node.data;
+                node = node.next;
+                return data;
             }
         };
     }

@@ -37,9 +37,11 @@ public class ListAppl {
         list.add(4, 13);
         System.out.println(list.size());
         System.out.println(list.get(4));
-        int n =list.lastIndexOf(5);
-        System.out.println(n);
-
+         num = list.lastIndexOf(5);
+        System.out.println(num);
+        for (Integer n : list) {
+            System.out.println(n);
+        }
 
 
     }
